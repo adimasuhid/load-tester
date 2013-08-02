@@ -29,7 +29,7 @@ class ApiController < ApplicationController
   end
 
   def sms
-    sleep 2
+    Rails.logger.info params
     render json: {status: 'success', message: 'Message Sent', code: "200"}
   end
 end
